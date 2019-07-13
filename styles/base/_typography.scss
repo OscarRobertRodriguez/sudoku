@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900|Roboto+Slab:300,400,700");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: $ff-sans;
+  min-height: 100vh;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: $fw-light;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: $ff-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 5vw;
+  margin-top: 0.5rem;
+  color: #fff;
+}
