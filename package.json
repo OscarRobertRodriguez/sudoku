@@ -19,5 +19,8 @@
   "homepage": "https://github.com/OscarRobertRodriguez/sudoku#readme",
   "devDependencies": {
     "sass": "^1.22.4"
+  },
+  "dependencies": {
+    "abstracts": "^0.2.3"
   }
 }
