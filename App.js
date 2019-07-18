@@ -3,6 +3,8 @@ import "./styles/root.css";
 
 import clearGameBoard from "./scripts/view/clearGameBoard";
 import limitMaxInput from "./scripts/game/limitMaxInput";
+import checkColumn from "./scripts/game/checkColumn";
+import checkBlock from "./scripts/game/checkBlock";
 
 var buttons = document.querySelectorAll("button");
 var inputs = document.querySelectorAll("input[type='number']");
@@ -14,9 +16,16 @@ inputs.forEach(input => {
   input.addEventListener("input", limitMaxInput);
 });
 
-// bigNumInputs.forEach(function handlerKeyDown(input) {
-//   input.addEventListener("keyup");
-// });
+bigNumInputs.forEach(function handlerKeyDown(input) {
+  input.addEventListener("keyup", function(event) {
+    var keypressed = event.target.value.charCodeAt();
+    // only run functions if numbers are pressed or delete key
+    if ((keypressed >= 49 && keypressed <= 57) || event.which == 8) {
+      // checkColumn(event);
+      checkBlock(event);
+    }
+  });
+});
 
 buttons.forEach(function handlerChangeBoard(btn) {
   btn.addEventListener("click", clearGameBoard);
