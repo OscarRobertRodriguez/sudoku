@@ -11,7 +11,778 @@
       <h1>Sodoku</h1>
     </header>
     <main class="main">
-      <div class="sodoku__board"></div>
+      <button type="button" data-id="board1">
+        Easy 1
+      </button>
+      <button type="button" data-id="board2">
+        Easy 2
+      </button>
+      <div class="sodoku__board">
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A1"
+              data-column="A1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A4"
+              data-column="A2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A7"
+              data-column="A3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="A9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="B9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="C9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D1"
+              data-column="A4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D4"
+              data-column="A5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D7"
+              data-column="A6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="D9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="E9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="F9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G1"
+              data-column="A7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G4"
+              data-column="A8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G7"
+              data-column="A9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="G9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="H9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+
+        <div class="sodoku__square">
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I1"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I2"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I3"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I4"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I5"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I6"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I7"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I8"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+          <div class="sodoku__box-container">
+            <input
+              maxlength="1"
+              data-square="I9"
+              type="number"
+              class="sodoku__box"
+            />
+            <input class="sodoku__track-box" type="number" maxlength="4" />
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <p>created by oscar 2019</p>

@@ -6,6 +6,10 @@
 
 @import "base/typography";
 
+@import "components/sodoku-board";
+@import "components/sodoku-box";
+
 @import "layout/general";
+@import "layout/main";
 @import "layout/footer";
 @import "layout/header";
