@@ -21,7 +21,7 @@ bigNumInputs.forEach(function handlerKeyDown(input) {
     var keypressed = event.target.value.charCodeAt();
     // only run functions if numbers are pressed or delete key
     if ((keypressed >= 49 && keypressed <= 57) || event.which == 8) {
-      // checkColumn(event);
+      checkColumn(event);
       checkBlock(event);
     }
   });
