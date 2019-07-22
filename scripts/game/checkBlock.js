@@ -1,3 +1,6 @@
+import disableBlocks from "./disableAllBlocks";
+import enableBlocks from "./enableAllBlocks";
+
 export default function checkBlock(e) {
   var target = e.target;
   var letterColKey = target.dataset.square.split("")[0];
@@ -16,9 +19,7 @@ export default function checkBlock(e) {
 
   // collect all columns with data-column-seleted set to true
   // this is done so that checkBlock does not overwrite checkColumn
-  var trueRedColumns = document.querySelectorAll(
-    `input[data-column-selected=true]`
-  );
+  var hasmark = document.querySelectorAll(".mark");
 
   // if their are more than the same # in block turn whole block red
   // a block is defined as a group of 9 little squares
@@ -27,13 +28,30 @@ export default function checkBlock(e) {
     uniqueValues.length > 1
   ) {
     allColSquares.forEach(item => {
-      item.style.background = "red";
+      item.classList.add("box--wrong");
     });
-  } else {
-    allColSquares.forEach(item => (item.style.background = ""));
+    target.style.background = "blue";
 
-    [...trueRedColumns].forEach(item => {
-      item.style.background = "red";
+    disableBlocks(target);
+  } else if (
+    nonFilterValues.length === uniqueValues.length &&
+    uniqueValues.length > 1 &&
+    hasmark.length >= 1
+  ) {
+    [...hasmark].forEach(item => {
+      item.classList.add("box--wrong");
     });
+
+    target.style.background = "blue";
+  } else {
+    allColSquares.forEach(item => {
+      item.classList.remove("box--wrong");
+    });
+    [...hasmark].forEach(item => {
+      item.classList.remove("box--wrong");
+    });
+
+    target.style.background = "";
+    enableBlocks();
   }
 }

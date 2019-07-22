@@ -25,11 +25,22 @@
   padding-bottom: 10px;
 }
 
-//
+// [disabled] {
+//   color: black;
+//   background: grey;
+// }
 
-[disabled] {
-  color: black;
+.box--disabled {
   background: grey;
+  color: black;
+}
+
+.box--white {
+  background: white;
+}
+
+.box--wrong {
+  background: red;
 }
 
 .sodoku__box-container {
