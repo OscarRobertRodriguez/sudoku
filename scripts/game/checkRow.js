@@ -1,15 +1,15 @@
-import disableBlocks from "./disableAllBlocks";
 import enableBlocks from "./enableAllBlocks";
+import disableBlocks from "./disableAllBlocks";
 
-export default function checkColumn(e) {
+export default function checkRow(e) {
   var target = e.target;
-  var letterColKey = target.dataset.column;
-  var allBlocks = document.querySelectorAll("input[data-square]");
-  var allColSquares = document.querySelectorAll(
-    `input[data-column=${letterColKey}`
+  var letterColKey = target.dataset.row;
+  var allRowSquares = document.querySelectorAll(
+    `input[data-row=${letterColKey}`
   );
+
   // returns all current values for column
-  var nonFilterValues = [...allColSquares]
+  var nonFilterValues = [...allRowSquares]
     .map(function checkColumnHandler(item) {
       return item.value;
     })
@@ -17,26 +17,27 @@ export default function checkColumn(e) {
 
   // use es6 set to filter all non unique values
   var uniqueValues = [...new Set(nonFilterValues)];
+  var hasmark = document.querySelectorAll(".mark");
+  var trueRedColumns = document.querySelectorAll(".box--wrong");
 
   // compare original values with unique values if
   // length is not same then there was a duplicate number so
   // all column is hightlighted red
-
   if (
     nonFilterValues.length !== uniqueValues.length &&
     uniqueValues.length > 1
   ) {
-    allColSquares.forEach(item => {
+    allRowSquares.forEach(item => {
       item.classList.add("box--wrong");
       item.classList.add("mark");
     });
+
     disableBlocks(target);
   } else {
-    allColSquares.forEach(item => {
+    enableBlocks();
+    allRowSquares.forEach(item => {
       item.classList.remove("box--wrong");
       item.classList.remove("mark");
     });
-
-    enableBlocks();
   }
 }

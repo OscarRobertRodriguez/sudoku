@@ -1,6 +1,7 @@
 import data from "../../game.json";
 
-export default function fillBoardPositions(btn) {
+export default function fillBoardPositions(e) {
+  var btn = e.target;
   var inputs = document.querySelectorAll('input[type = "number"]');
   var littleInputs = document.querySelectorAll(".sodoku__track-box");
   data.boards.forEach(board => {
@@ -12,7 +13,7 @@ export default function fillBoardPositions(btn) {
         inputs[inputToFill].value = cordObj.y;
         inputs[inputToFill].disabled = true;
         inputs[inputToFill].nextElementSibling.style.display = "none";
-        inputs[inputToFill].style.background = "grey";
+        inputs[inputToFill].classList.add("box--disabled");
       });
     }
   });
