@@ -1,0 +1,80 @@
+.modal {
+  display: grid;
+  grid-template-rows: auto 100px 1fr 1fr 50px;
+  &__background {
+    display: grid;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: green;
+    z-index: 9999;
+    @media #{$break1} {
+      padding: 0 8px;
+    }
+  }
+  & h1 {
+    font-size: 4vw;
+    @media #{$break1} {
+      font-size: 7vh;
+    }
+  }
+
+  & h2 {
+    align-self: end;
+    font-size: 2vw;
+    @media #{$break1} {
+      align-self: end;
+      font-size: 6vw;
+    }
+    @media #{$break3}, #{$break4} {
+      font-size: 2rem;
+      color: red;
+    }
+  }
+
+  & select {
+    align-self: start;
+    margin-top: 5rem;
+    height: 65px;
+    font-size: 1.3rem;
+    @media #{$break1} {
+      align-self: center;
+    }
+  }
+
+  & button {
+    cursor: pointer;
+    grid-row: 4/5;
+    font-size: 3vh;
+    background: none;
+    border: 3px solid #fff;
+    color: #fff;
+    font-family: $ff-sans;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: transform 0.2s ease, background 1s ease, color 0.2s ease-in-out,
+      box-shadow 0.1s ease;
+    font-weight: bold;
+    height: 80px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      color: black;
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 0px 0px;
+    }
+
+    @media #{$break1} {
+      font-size: 6vw;
+      height: 80px;
+    }
+  }
+}

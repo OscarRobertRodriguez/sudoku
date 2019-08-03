@@ -3,11 +3,13 @@
 @import "abstracts/typography";
 @import "abstracts/general";
 @import "abstracts/mixins";
+@import "abstracts/devices";
 
 @import "base/typography";
 
 @import "components/sodoku-board";
 @import "components/sodoku-box";
+@import "components/modal";
 
 @import "layout/general";
 @import "layout/main";

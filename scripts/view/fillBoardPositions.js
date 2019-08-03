@@ -1,11 +1,13 @@
 import data from "../../game.json";
 
-export default function fillBoardPositions(e) {
-  var btn = e.target;
+export default function fillBoardPositions(value) {
   var inputs = document.querySelectorAll('input[type = "number"]');
-  var littleInputs = document.querySelectorAll(".sodoku__track-box");
+
   data.boards.forEach(board => {
-    if (board.id == btn.dataset.id) {
+    console.log("====================================");
+    console.log(value);
+    console.log("====================================");
+    if (board.id == value) {
       board.fillPositions.forEach(cordObj => {
         var inputToFill = [...inputs].findIndex(
           input => input.dataset.square == cordObj.x

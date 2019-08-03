@@ -6,19 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
+<style>
+    #pleaserotate-graphic{
+    fill: #fff;
+    }
+    
+    #pleaserotate-backdrop {
+    color: #fff;
+    background-color: #000;
+    }
+    </style>
 </head>
 
 <body>
+<div class="modal__background">
+ <div class="modal">
+   <h1>Sodoku</h1>
+  <h2>Select a puzzle</h2>
+   <select class="select-css">
+     <option value='bd1'>puzzle 1- easy </option>
+     <option value='bd2'>puzzle 2- easy</option>
+     <option value='bd3'>puzzle 3- easy</option>
+     <option value='bd4'>puzzle 4- easy</option>
+     <option value='bd5'>puzzle 5- easy</option>
+     <option value='bd6'>puzzle 6- easy</option>
+     <option value='bd7'>puzzle 7- easy</option>
+     <option value='bd8'>puzzle 8- easy</option>
+     <option value='bd9'>puzzle 9- easy</option>
+     <option value='bd10'>puzzle 10- med</option>
+    <option value='bd11'>puzzle 11- med</option>
+    <option value='bd12'>puzzle 12- med</option>
+    <option value='bd13'>puzzle 13- med</option>
+    <option value='bd14'>puzzle 14- med</option>
+    <option value='bd15'>puzzle 15- med</option>
+    <option value='bd16'>puzzle 16- hard</option>
+    <option value='bd17'>puzzle 17- hard</option>
+    <option value='bd18'>puzzle 18- hard</option>
+  
+   
+   </select>
+
+   <button class="btn--start">start</button>
+ </div>
+ </div>
   <header>
     <h1>Sodoku</h1>
   </header>
   <main class="main">
-    <button type="button" data-id="board1">
+    <!-- <button type="button" data-id="board1">
       Easy 1
     </button>
     <button type="button" data-id="board2">
       Easy 2
-    </button>
+    </button> -->
     <div class="sodoku__board">
       <div class="sodoku__square">
         <div class="sodoku__box-container">
@@ -373,8 +413,9 @@
     </div>
   </main>
   <footer class="footer">
-    <p>created by oscar 2019</p>
+    <small>created by oscar 2019</small>
   </footer>
+  
   <script src="./App.js"></script>
 </body>
 

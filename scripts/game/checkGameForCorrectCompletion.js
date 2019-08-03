@@ -1,4 +1,6 @@
 import clearGameBoard from "./../view/clearGameBoard";
+import { startId } from "./startGame";
+import setToTrue from "./setLocalStoragePuzzleToTrue";
 
 export default function checkGameForCorrectCompletion() {
   var allBlocks = document.querySelectorAll("input[data-square]");
@@ -11,12 +13,9 @@ export default function checkGameForCorrectCompletion() {
     return item.classList.contains("box--wrong");
   });
 
-  console.log("====================================");
-  console.log(redBlocks, "test");
-  console.log("====================================");
-
   if (items.length === allBlocks.length && redBlocks == false) {
     alert("you have completed the puzzle. want to try another one?");
+    setToTrue(startId);
     clearGameBoard();
   }
 }
