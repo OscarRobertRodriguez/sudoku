@@ -1,5 +1,6 @@
 import disableBlocks from "./disableAllBlocks";
 import enableBlocks from "./enableAllBlocks";
+import checkRow from "./checkRow";
 
 export default function checkColumn(e) {
   var target = e.target;
@@ -32,11 +33,11 @@ export default function checkColumn(e) {
     });
     disableBlocks(target);
   } else {
+    enableBlocks();
     allColSquares.forEach(item => {
       item.classList.remove("box--wrong");
       item.classList.remove("mark");
     });
-
-    enableBlocks();
+    checkRow(e);
   }
 }

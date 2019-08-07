@@ -6,7 +6,12 @@ export default function enableBlocks(target) {
   });
 
   allBlocks.forEach(item => {
+    var parent = item.parentElement;
     item.disabled = false;
+    if (parent.classList.contains("heartBeat")) {
+      parent.classList.remove("heartBeat");
+      parent.style.zIndex = 1;
+    }
   });
 
   onlyStartDisabledBlocks.forEach(item => {

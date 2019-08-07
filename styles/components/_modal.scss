@@ -1,0 +1,130 @@
+.modal {
+  display: grid;
+  // grid-template-rows: auto 100px 1fr 1fr 50px;
+  background: rgba(7, 95, 210, 0.803);
+  height: 400px;
+  width: 500px;
+  justify-content: center;
+  border-radius: 10px;
+  @media #{$break1} {
+    width: 350px;
+    margin: 0 5px;
+  }
+  &__background {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("~/assets/numbers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    @media #{$break1} {
+      padding: 0 8px;
+    }
+  }
+  & h1 {
+    font-size: 4rem;
+    align-self: center;
+    @media #{$break1} {
+      font-size: 2.5rem;
+    }
+  }
+
+  & h2 {
+    align-self: end;
+    font-size: 2vw;
+    @media #{$break1} {
+      align-self: end;
+      font-size: 6vw;
+    }
+    @media #{$break3}, #{$break4} {
+      font-size: 2rem;
+      color: red;
+    }
+  }
+
+  & select {
+    align-self: start;
+    height: 65px;
+    font-size: 1.3rem;
+    @media #{$break1} {
+      align-self: center;
+    }
+  }
+
+  & button {
+    cursor: pointer;
+    grid-row: 4/5;
+    font-size: 3vh;
+    background: none;
+    border: 3px solid #fff;
+    color: #fff;
+    font-family: $ff-sans;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: transform 0.2s ease, background 1s ease, color 0.2s ease-in-out,
+      box-shadow 0.1s ease;
+    font-weight: bold;
+    height: 80px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(-2px);
+      background: #fff;
+      color: black;
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 0px 0px;
+    }
+
+    @media #{$break1} {
+      font-size: 5vw;
+      height: 60px;
+      width: 150px;
+      justify-self: center;
+    }
+  }
+}
+
+.restartModal__background {
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  position: fixed;
+  overflow: hidden;
+  display: grid;
+}
+
+.restartModal {
+  background: rgba(7, 95, 210, 0.967);
+  padding: 50px;
+  font-size: 2rem;
+  color: #fff;
+  width: 30vw;
+  justify-self: center;
+  align-self: center;
+  max-height: 100%;
+  & p {
+    margin-bottom: 2rem;
+  }
+  @media #{$break1} {
+    font-size: 1.5rem;
+    padding: 30px;
+    width: 300px;
+    max-width: 97%;
+  }
+  @media #{$break2_1} {
+    font-size: 1.3rem;
+    padding: 30px;
+  }
+}
