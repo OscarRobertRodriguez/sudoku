@@ -12,4 +12,7 @@ img {
 body {
   display: grid;
   grid-template-rows: 40px auto 30px;
+  background-image: url("~/assets/numbers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

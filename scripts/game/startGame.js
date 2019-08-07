@@ -10,7 +10,7 @@ export default function startGame(e) {
   startId = selectValue;
   var modal = document.querySelector(".modal__background");
 
-  modal.style.display = "none";
+  modal.classList.add("slideOutLeft");
   addToLocalStorage(selectValue);
   clearBoard();
   fillBoardPositions(selectValue);

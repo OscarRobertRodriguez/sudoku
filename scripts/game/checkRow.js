@@ -1,5 +1,6 @@
 import enableBlocks from "./enableAllBlocks";
 import disableBlocks from "./disableAllBlocks";
+import checkBlock from "./checkBlock";
 
 export default function checkRow(e) {
   var target = e.target;
@@ -39,5 +40,6 @@ export default function checkRow(e) {
       item.classList.remove("box--wrong");
       item.classList.remove("mark");
     });
+    checkBlock(e);
   }
 }
