@@ -4,7 +4,8 @@
   "description": "a sudoku game for web",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build index.html --public-url /sodoku/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,11 @@
   },
   "homepage": "https://github.com/OscarRobertRodriguez/sudoku#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "sass": "^1.22.4"
   },
   "dependencies": {
-    "abstracts": "^0.2.3"
+    "abstracts": "^0.2.3",
+    "gh-pages": "^2.1.0"
   }
 }
