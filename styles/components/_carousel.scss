@@ -1,0 +1,88 @@
+.carousel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  width: 500px;
+  flex-direction: column;
+  height: 600px;
+  border-radius: 20px;
+
+  &__controls,
+  &__activator {
+    display: none;
+  }
+
+  &__controls {
+    width: 100%;
+    & img {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+    }
+    position: absolute;
+    top: 50%;
+  }
+
+  &__control--forward {
+    position: absolute;
+    right: 5px;
+  }
+
+  &__control--backward {
+    position: absolute;
+    left: 5px;
+    & img {
+      transform: rotate(180deg);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .carousel__activator:nth-of-type(#{$i}):checked
+      ~ .carousel__slide:nth-of-type(#{$i}) {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel__activator:nth-of-type(#{$i}):checked
+      ~ .carousel__controls:nth-of-type(#{$i}) {
+      display: block;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  }
+}
+
+.carousel__slide {
+  list-style-type: none;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  display: none;
+  padding: 10px 20px;
+
+  top: 0;
+  left: 0;
+  & p {
+    font-size: 1.5rem;
+  }
+  & img {
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    justify-self: center;
+    padding: 0;
+  }
+}
+
+@for $i from 1 through 3 {
+  .carousel__activator:nth-of-type(#{$i}):checked
+    ~ .carousel__slide:nth-of-type(#{$i}) {
+    display: block;
+    animation: fadeIn 0.5s;
+  }
+}

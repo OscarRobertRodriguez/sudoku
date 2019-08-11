@@ -13,12 +13,17 @@ import fillBoardPositions from "./scripts/view/fillBoardPositions";
 import startGame from "./scripts/game/startGame";
 import checkLocalStorageForPuzzleCompletion from "./scripts/game/checkLocalStorageForPuzzleCompletion";
 import restartGame from "./scripts/game/restartGame";
+import hideCarousel from "./scripts/view/hideCarousel";
+import dontShowAgainAddToLocalStorage from "./scripts/game/dontShowAgainLocalStorage";
+import checkLocalStorageCarousel from "./scripts/game/checkLocalStorageCarousel";
 
 var button = document.querySelectorAll(".modal__btn");
 var inputs = document.querySelectorAll("input[type='number']");
 var bigNumInputs = document.querySelectorAll(".sodoku__box");
 var startBtn = document.querySelector(".btn--start");
 var restartBtn = document.querySelector(".restart__btn");
+var closeButton = document.querySelector(".btn--close");
+var btnDontShowAgain = document.querySelector(".btn--carousel");
 
 /// events
 
@@ -30,6 +35,17 @@ startBtn.addEventListener("click", function startGameHandler(e) {
 // restart game on completion
 restartBtn.addEventListener("click", restartGame);
 
+// close howToModal
+
+closeButton.addEventListener("click", hideCarousel);
+
+// dont show modal again btn using local storage
+
+btnDontShowAgain.addEventListener("click", function dontShowHandler() {
+  hideCarousel();
+  dontShowAgainAddToLocalStorage();
+});
+
 // when page is loaded it sets all inputs to disabled
 // also add a listener to limit each input to one value
 window.addEventListener("load", function() {
@@ -38,8 +54,11 @@ window.addEventListener("load", function() {
     input.addEventListener("input", limitMaxInput);
   });
 
-  // check if any puzzles have been completed before and put start next to their names
+  // check if any puzzles have been completed before and put
+  // completed next to their names
   checkLocalStorageForPuzzleCompletion();
+
+  checkLocalStorageCarousel();
 });
 
 // add keyup event to each big input
@@ -56,8 +75,6 @@ bigNumInputs.forEach(function handlerKeyDown(input) {
     // only run functions if numbers are pressed or delete key
     if ((keypressed >= 49 && keypressed <= 57) || event.which == 8) {
       checkColumn(event);
-      // checkRow(event);
-      // checkBlock(event);
       checkGameForCorrectCompletion();
     }
   });

@@ -4,9 +4,6 @@ export default function fillBoardPositions(value) {
   var inputs = document.querySelectorAll('input[type = "number"]');
 
   data.boards.forEach(board => {
-    console.log("====================================");
-    console.log(value);
-    console.log("====================================");
     if (board.id == value) {
       board.fillPositions.forEach(cordObj => {
         var inputToFill = [...inputs].findIndex(

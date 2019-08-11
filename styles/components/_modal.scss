@@ -128,3 +128,41 @@
     padding: 30px;
   }
 }
+
+/// how game works modal
+
+.howGameWorksModal {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  & p {
+    padding: 50px 20px;
+    font-size: 1.5rem;
+  }
+  & img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  & .arrow {
+    width: 60px;
+    position: absolute;
+    right: 30px;
+    top: 60%;
+    cursor: pointer;
+  }
+
+  & .slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

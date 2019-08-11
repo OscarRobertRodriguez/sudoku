@@ -424,6 +424,89 @@
       </button>
     </div>
   </div>
+
+  <!-- <div class="howGameWorksModal">
+    
+    <input id='checkbox-1' name='intro' type='radio' checked/>
+     <div class='slide hidden animated'>
+      <p>The goal of Sodoku is to fill in all the empty squares so that every row, column and square have the numbers 1 through 9 without any repetition of those numbers. </p>
+      <img src="./assets/screenshotSodoku_1.png" alt="">
+      <label for='checkbox-2'><img class='arrow' src="./assets/baseline-keyboard_arrow_right-24px.svg"/> </label>
+     </div>
+
+
+     <input id='checkbox-2' name='intro' type='radio'/>
+     <div class='slide  animated'>
+      <p>The goal of Sodoku is to fill in all the empty squares so that every row, column and square have the numbers 1 through 9 without any repetition of those numbers. </p>
+      <img src="./assets/screenshotSodoku_1.png" alt="">
+       <label for='checkbox-3'><img class='arrow' src="./assets/baseline-keyboard_arrow_right-24px.svg"/> </label>
+     </div>
+
+
+     <input id='checkbox-3' type='radio' name='intro'/>
+     <div class='slide animated'>
+      <p>The goal of Sodoku is to fill in all the empty squares so that every row, column and square have the numbers 1 through 9 without any repetition of those numbers. </p>
+
+      <img src="./assets/screenshotSodoku_1.png" alt="">
+     </div>
+  </div> -->
+
+
+  <ul class="carousel animated">
+     <button type='button' class="btn--close">
+       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"  pointer-events='none'><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z"  fill="none"/></svg>
+     </button>
+     <input type="radio" id='1' name='activator' checked='checked' class="carousel__activator">
+     <input type="radio" id='2' name='activator'  class="carousel__activator">
+     <input type="radio" id='3' name='activator'  class="carousel__activator">
+
+     <div class="carousel__controls">
+         <label for="2" class="carousel__control carousel__control--forward"><img src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+          <label for="3" class="carousel__control carousel__control--backward"><img
+              src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+     </div>
+    <div class="carousel__controls">
+      <label for="3" class="carousel__control carousel__control--forward"><img src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+      <label for="1" class="carousel__control carousel__control--backward"><img
+          src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="1" class="carousel__control carousel__control--forward"><img
+          src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+      <label for="2" class="carousel__control carousel__control--backward"><img
+          src="./assets/baseline-keyboard_arrow_right-24px.svg" alt=""></label>
+    </div>
+
+        <li class='carousel__slide'>
+          <p>The goal of Sodoku is to fill in all the empty squares so that every row, column and square have the numbers 1
+            through 9 without any repetition of those numbers. </p>
+          <img src="./assets/screenshotSodoku_1.png" alt="">
+          </li>
+        
+      
+        <li class='carousel__slide'>
+          <p>Use the small white box too keep track of possible numbers. Max of four tracking numbers.</p>
+          <p>In the light blue squares write your choice.</p>
+          <img src="./assets/screenshot__2.png" alt="">
+
+          </li>
+        
+        
+        <li class='carousel__slide'>
+          <p>When you put the a duplicate number on a row, column or square it will show effected red squares. Delete the the number you just entered to proceed and try again</p>
+      
+          <img src="./assets/screenshot__3.png" alt="">
+
+          <button class="btn btn--carousel">don't show again</button>
+          </li>
+
+          <div class="carousel__indicators">
+           <label for="1" class="carousel__indicator"></label>
+           <label for="2" class="carousel__indicator"></label>
+           <label for="3" class="carousel__indicator"></label>
+          </div>
+  </ul>
+
   
   <script src="./App.js"></script>
 </body>

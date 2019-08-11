@@ -4,7 +4,7 @@
   "description": "a sudoku game for web",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html --public-url /sodoku/",
+    "build": "parcel build index.html --public-url /sudoku/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "abstracts": "^0.2.3",
-    "gh-pages": "^2.1.0"
+    "gh-pages": "^2.0.1"
   }
 }
