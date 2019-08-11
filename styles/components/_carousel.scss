@@ -6,10 +6,16 @@
   background: #fff;
   padding: 0;
   margin: 0;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   flex-direction: column;
   height: 600px;
   border-radius: 20px;
+
+  @media #{$break1} {
+    max-width: 360px;
+    width: 95%;
+  }
 
   &__controls,
   &__activator {
@@ -65,10 +71,19 @@
   display: none;
   padding: 10px 20px;
 
+  @media #{$break1} {
+    padding: 10px;
+  }
+
   top: 0;
   left: 0;
   & p {
     font-size: 1.5rem;
+    @media #{$break1} {
+      font-size: 1.2rem;
+      padding: 5px 20px;
+      line-height: 2;
+    }
   }
   & img {
     max-width: 300px;
@@ -76,6 +91,10 @@
     display: block;
     justify-self: center;
     padding: 0;
+
+    @media #{$break1} {
+      max-width: 250px;
+    }
   }
 }
 

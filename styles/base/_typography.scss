@@ -41,6 +41,10 @@ h1 {
   color: #fff;
 
   @media #{$break1} {
-    font-size: 8vw;
+    font-size: 5vw;
+  }
+
+  @media #{$break2_1}, #{$break2}, #{$break3}, #{$break3} {
+    font-size: 3vw;
   }
 }

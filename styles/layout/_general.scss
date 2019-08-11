@@ -15,4 +15,8 @@ body {
   background-image: url("~/assets/numbers.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media #{$break1} {
+    grid-template-rows: 40px auto 200px;
+  }
 }
