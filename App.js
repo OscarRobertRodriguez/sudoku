@@ -77,5 +77,9 @@ bigNumInputs.forEach(function handlerKeyDown(input) {
       checkColumn(event);
       checkGameForCorrectCompletion();
     }
+
+    if (event.which == 13) {
+      this.blur();
+    }
   });
 });
