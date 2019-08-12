@@ -60,6 +60,7 @@
       transition: all 0.2s;
       pointer-events: all;
       fill: #fff;
+      z-index: 1000;
     }
 
     &:hover svg {

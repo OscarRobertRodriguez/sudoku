@@ -4,6 +4,7 @@
   "description": "a sudoku game for web",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "parcel build index.html --public-url /sudoku/",
     "deploy": "gh-pages -d dist"
   },
