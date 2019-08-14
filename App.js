@@ -54,7 +54,8 @@ document.addEventListener("click", function documentEventHandler(e) {
   if (howToModalHasBeenClosed) {
     if (
       clickedTarget.classList.contains("sodoku__box") ||
-      clickedTarget.classList.contains("sodoku__track-box")
+      clickedTarget.classList.contains("sodoku__track-box") ||
+      clickedTarget.classList.contains("box--disabled")
     ) {
       return;
     } else {
