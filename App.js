@@ -24,6 +24,7 @@ var startBtn = document.querySelector(".btn--start");
 var restartBtn = document.querySelector(".restart__btn");
 var closeButton = document.querySelector(".btn--close");
 var btnDontShowAgain = document.querySelector(".btn--carousel");
+var howToModalHasBeenClosed = false;
 
 /// events
 
@@ -37,13 +38,39 @@ restartBtn.addEventListener("click", restartGame);
 
 // close howToModal
 
-closeButton.addEventListener("click", hideCarousel);
+closeButton.addEventListener("click", function closeHowToModalHandler() {
+  hideCarousel();
+  var notADisabledInput = document.querySelector("input:not(.box--disabled)");
+  notADisabledInput.focus();
+
+  howToModalHasBeenClosed = true;
+});
+
+// listen for click events on document that are input only
+// if not focus on an input
+document.addEventListener("click", function documentEventHandler(e) {
+  var clickedTarget = e.target;
+
+  if (howToModalHasBeenClosed) {
+    if (
+      clickedTarget.classList.contains("sodoku__box") ||
+      clickedTarget.classList.contains("sodoku__track-box")
+    ) {
+      return;
+    } else {
+      var noPreFilledInput = document.querySelector(
+        ".sodoku__box:not(.box--disabled)"
+      );
+      noPreFilledInput.focus();
+    }
+  }
+});
 
 // dont show modal again btn using local storage
-
 btnDontShowAgain.addEventListener("click", function dontShowHandler() {
   hideCarousel();
   dontShowAgainAddToLocalStorage();
+  howToModalHasBeenClosed = true;
 });
 
 // when page is loaded it sets all inputs to disabled
@@ -79,7 +106,7 @@ bigNumInputs.forEach(function handlerKeyDown(input) {
     }
 
     if (event.which == 13) {
-      this.blur();
+      return false;
     }
   });
 });
