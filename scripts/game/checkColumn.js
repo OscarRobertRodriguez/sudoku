@@ -9,6 +9,7 @@ export default function checkColumn(e) {
   var allColSquares = document.querySelectorAll(
     `input[data-column=${letterColKey}`
   );
+
   // returns all current values for column
   var nonFilterValues = [...allColSquares]
     .map(function checkColumnHandler(item) {
@@ -38,6 +39,7 @@ export default function checkColumn(e) {
       item.classList.remove("box--wrong");
       item.classList.remove("mark");
     });
+
     checkRow(e);
   }
 }
